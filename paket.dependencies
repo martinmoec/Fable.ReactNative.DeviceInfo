@@ -1,5 +1,0 @@
-source https://nuget.org/api/v2
-storage: none
-
-nuget Fable.Core
-nuget Fable.Promise

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>Fable.ReactNative.DeviceInfo</PackageId>
-    <Version>0.0.9-alpha</Version>
+    <Version>1.0.1</Version>
     <PackageTags>Fable;react-native;react-native-device-info;Fsharp;FSharp Fable ReactNative;</PackageTags>
     <Description>Fable bindings for react-native-device-info</Description>
     <PackageProjectUrl>https://github.com/martinmoec/Fable.ReactNative.DeviceInfo</PackageProjectUrl>
@@ -14,7 +14,7 @@
   </ItemGroup>
   <PropertyGroup>
     <NpmDependencies>
-      <NpmPackage Name="react-native-device-info" Version="&gt;= 5.5.3" />
+      <NpmPackage Name="react-native-device-info" Version="&gt;= 5.6.0" />
     </NpmDependencies>
   </PropertyGroup>
   <ItemGroup>
@@ -24,5 +24,4 @@
   <ItemGroup>
     <Content Include="*.fsproj; *.fs" PackagePath="fable\" />
   </ItemGroup>
-  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

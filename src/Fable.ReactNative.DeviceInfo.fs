@@ -94,6 +94,7 @@ type DeviceInfo =
     abstract member supported32BitAbis : unit -> JS.Promise<string []>
     abstract member supported64BitAbis : unit -> JS.Promise<string []>
     abstract member supportedAbis : unit -> JS.Promise<string []>
+    abstract member syncUniqueId : unit -> JS.Promise<string>
 
 
 
@@ -649,6 +650,14 @@ let supportedAbis () =
     promise {
         try
             let! x = Globals.DeviceInfo.supportedAbis()
+            return Result.Ok x
+        with | e -> return Result.Error e.Message
+    }
+
+let syncUniqueId () = 
+    promise {
+        try
+            let! x = Globals.DeviceInfo.syncUniqueId()
             return Result.Ok x
         with | e -> return Result.Error e.Message
     }
